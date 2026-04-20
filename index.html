@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kanade-home</title>
+    <title>宵崎 奏 | 秘密基地</title>
     <style>
-        /* 这里负责页面的长相 */
         body {
-            background-image: url('bg.png'); /* 调用你那张 bg.png */
+            background-image: url('bg.png'); /* 确保文件名正确 */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -16,43 +15,93 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: sans-serif;
-        }
-        .main-box {
-            background-color: rgba(0, 0, 0, 0.4); /* 半透明黑框 */
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
+            font-family: 'Microsoft YaHei', sans-serif;
             color: white;
-            border: 1px solid #a5b4fc;
-            backdrop-filter: blur(5px); /* 毛玻璃效果 */
-            width: 80%;
+        }
+
+        /* 核心装饰框：增加毛玻璃质感 */
+        .main-box {
+            background-color: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(12px); /* 毛玻璃模糊 */
+            -webkit-backdrop-filter: blur(12px);
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(165, 180, 252, 0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            width: 85%;
             max-width: 400px;
         }
-        h1 { color: #a5b4fc; margin-bottom: 10px; }
-        .btn {
-            display: block;
-            background: #333;
+
+        h1 {
+            margin-top: 0;
+            font-weight: 300;
+            letter-spacing: 5px;
             color: #a5b4fc;
-            padding: 12px;
-            margin: 10px 0;
-            text-decoration: none;
-            border-radius: 8px;
-            border: 1px solid #444;
-            transition: 0.3s;
         }
-        .btn:hover { background: #a5b4fc; color: black; }
+
+        /* 打字机动画 */
+        .typing {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #a5b4fc;
+            animation: typing 3.5s steps(20, end), blink 0.75s step-end infinite;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink { from, to { border-color: transparent } 50% { border-color: #a5b4fc } }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s;
+            font-size: 0.9em;
+        }
+
+        .btn:hover {
+            background: #a5b4fc;
+            color: black;
+            transform: translateY(-2px);
+        }
+
+        /* 播放器微调 */
+        .music-player {
+            margin-top: 25px;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
 
     <div class="main-box">
-        <h1>欢迎来到奏的创作室</h1>
-        <p>“一緒に、探す方法を考えよう”</p>
+        <h1>欢迎来到小奏bot的网站</h1>
+        <div class="typing-container">
+            <span class="typing">“一緒に、探す方法を考えよう”</span>
+        </div>
         
-        <a href="https://upload.sakura-bot.cn" class="btn" target="_blank">Sakurabot抓包</a>
-        <a href="https://haruki.seiunx.com/upload-data" class="btn" target="_blank">Harukibot抓包</a>
-        <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=VIvhdCYSOKrgAdnJbya3OsxKNrqmSv4oFe%2BBmxuJfCklr8gjZkvHES28AYeYv0SZ&busi_data=eyJncm91cENvZGUiOiI2MjAxNzg4MDYiLCJ0b2tlbiI6IkhuMmZJd1JvNTkyWjlGWVh0UlVKK0tkcHZiRWhKa2dSZ1JIOG1GODRpR1ZtNjBYREVhKzhaaU0zNjlLWmN6di8iLCJ1aW4iOiIzNjI1NDA4MTk4In0%3D&data=CfJPRT-AbLaLaNytaU09irW4ppUWRpVsBFHsGEM9piZuk8lW00DHSN1FSa2zZOhc_b0YaGgzcvcrk7SOZjoSsg&svctype=4&tempid=h5_group_info" class="btn" style="background: #a5b4fc; color: black;" target="_blank">✨ 加入奏的创作室 (QQ群)</a>
+        <div class="links">
+            <a href="https://help.mikuware.top" class="btn" target="_blank">Sakurabot抓包</a>
+            <a href="https://haruki.seiunx.com/upload-data" class="btn" target="_blank">Harukibot抓包</a>
+            <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=VIvhdCYSOKrgAdnJbya3OsxKNrqmSv4oFe%2BBmxuJfCklr8gjZkvHES28AYeYv0SZ&busi_data=eyJncm91cENvZGUiOiI2MjAxNzg4MDYiLCJ0b2tlbiI6IkhuMmZJd1JvNTkyWjlGWVh0UlVKK0tkcHZiRWhKa2dSZ1JIOG1GODRpR1ZtNjBYREVhKzhaaU0zNjlLWmN6di8iLCJ1aW4iOiIzNjI1NDA4MTk4In0%3D&data=CfJPRT-AbLaLaNytaU09irW4ppUWRpVsBFHsGEM9piZuk8lW00DHSN1FSa2zZOhc_b0YaGgzcvcrk7SOZjoSsg&svctype=4&tempid=h5_group_info" class="btn" style="background: #a5b4fc; color: black;" target="_blank">✨ 加入奏的创作室 (QQ群)</a>
+        </div>
+
+        <div class="music-player">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=52 src="//music.163.com/outchain/player?type=2&id=1841315802&auto=0&height=32"></iframe>
+        </div>
     </div>
 
 </body>
